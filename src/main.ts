@@ -10,7 +10,7 @@ async function bootstrap() {
     AppModule,
     {
       transport: Transport.TCP,
-      options: { port: envs.port },
+      options: { port: envs.port, host: envs.host },
     },
   );
 
@@ -21,6 +21,5 @@ async function bootstrap() {
     }),
   );
   logger.log(`Products microservices running on port ${envs.port}`);
-
 }
 bootstrap();
